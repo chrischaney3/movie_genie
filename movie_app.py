@@ -56,15 +56,15 @@ def make_suggestion(movie_title):
     # Check if a close match was found
     if closest_match:
         close_match = closest_match[0]
-        matching_movies = movies_data[movies_data['title'] == close_match]
-        # index_of_the_movie = movies_data[movies_data['title'] == close_match].index[0]
+        # matching_movies = movies_data[movies_data['title'] == close_match]
+        index_of_the_movie = movies_data[movies_data['title'] == close_match].index[0]
         # Check if there are matching movies
-        if not matching_movies.empty:
-            index_of_the_movie = matching_movies.index[0]
-            print(f"Index of the movie: {index_of_the_movie}")
+        # if not matching_movies.empty:
+        #     index_of_the_movie = matching_movies.index[0]
+        #     print(f"Index of the movie: {index_of_the_movie}")
 
             # Get the poster paths for the similar movies
-            similar_movie_posters = [f"http://image.tmdb.org/t/p/w185{poster_path}" if poster_path else '/static/images/360_F_335870951_YOHbsBpoBva5TFpCwNqRdsurzzwLukuI.jpg' for poster_path in list_of_poster_paths]
+            # similar_movie_posters = [f"http://image.tmdb.org/t/p/w185{poster_path}" if poster_path else '/static/images/360_F_335870951_YOHbsBpoBva5TFpCwNqRdsurzzwLukuI.jpg' for poster_path in list_of_poster_paths]
 
     # Rest of the code...
         print(f"Index of the movie: {index_of_the_movie}")
@@ -92,8 +92,8 @@ def make_suggestion(movie_title):
     # similar_movie_posters = [f"http://image.tmdb.org/t/p/w185{poster_path}" if poster_path else '/static/images/360_F_335870951_YOHbsBpoBva5TFpCwNqRdsurzzwLukuI.jpg' for poster_path in similar_movie_posters]
     # similar_movie_posters = [f"http://image.tmdb.org/t/p/w185{poster_path}" for poster_path in similar_movie_posters]
     # return list_of_titles[similar_movie_indices[0]]
-    # return [list_of_titles[index] for index in similar_movie_indices]
-    return [(list_of_titles[index], similar_movie_posters[i]) for i, index in enumerate(similar_movie_indices)]
+    return [list_of_titles[index] for index in similar_movie_indices]
+    # return [(list_of_titles[index], similar_movie_posters[i]) for i, index in enumerate(similar_movie_indices)]
 
 if __name__ == '__main__':
     app.run()

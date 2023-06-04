@@ -18,15 +18,15 @@
     <p>{{ output[0] }}</p>
     {% if output|length > 1 %}
         <h2>I think you will like:</h2>
-        <ul>
+        <!-- <ul> -->
         {% for suggestion in output[1:4] %}
-            <li>
+            <!-- <li>
                 <img src="{{ suggestion[1] }}" alt="{{ suggestion[0] }} Poster">
                 <span>{{ suggestion[0] }}</span>
-            </li>
-            <!-- <p>{{ suggestion }}</p> -->
+            </li> -->
+            <p>{{ suggestion }}</p>
         {% endfor %}
-    </ul>
+    <!-- </ul> -->
     {% endif %}
 {% endif %}
     </center>

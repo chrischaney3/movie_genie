@@ -13,7 +13,7 @@ def index():
     if request.method == 'POST':
         movie_title = request.form['movie_title']
         output = make_suggestion(movie_title)
-        return render_template('index.html', output=output)
+        return render_template('index.html', output=output[:5], movie_title=movie_title)
     return render_template('index.html')
 
 def make_suggestion(movie_title):
@@ -50,13 +50,28 @@ def make_suggestion(movie_title):
     # Get the closest match to the input movie title
     closest_match = difflib.get_close_matches(movie_title, filtered_titles, n=1, cutoff=0.6)
 
+    # Create empty list for poster paths
+    similar_movie_posters = []
+
     # Check if a close match was found
     if closest_match:
         close_match = closest_match[0]
-        index_of_the_movie = movies_data[movies_data['title'] == close_match].index[0]
+        matching_movies = movies_data[movies_data['title'] == close_match]
+        # index_of_the_movie = movies_data[movies_data['title'] == close_match].index[0]
+        # Check if there are matching movies
+        if not matching_movies.empty:
+            index_of_the_movie = matching_movies.index[0]
+            print(f"Index of the movie: {index_of_the_movie}")
+
+            # Get the poster paths for the similar movies
+            similar_movie_posters = [f"http://image.tmdb.org/t/p/w185{poster_path}" if poster_path else '/static/images/360_F_335870951_YOHbsBpoBva5TFpCwNqRdsurzzwLukuI.jpg' for poster_path in list_of_poster_paths]
+
+    # Rest of the code...
         print(f"Index of the movie: {index_of_the_movie}")
     else:
         no_match = "No Match Found"
+
+
 
     # Convert movie_database to a TF-IDF matrix
     vectorizer = TfidfVectorizer()
@@ -70,9 +85,15 @@ def make_suggestion(movie_title):
     input_title_index = list_of_titles.index(close_match)
 
     # Find the indices of similar movies (excluding the exact match)
-    similar_movie_indices = nn_model.kneighbors(tfidf_matrix[input_title_index], n_neighbors=31, return_distance=False)[0][1:]
+    # similar_movie_indices = nn_model.kneighbors(tfidf_matrix[input_title_index], n_neighbors=31, return_distance=False)[0][1:]
+    similar_movie_indices = nn_model.kneighbors(tfidf_matrix[input_title_index], n_neighbors=5, return_distance=False)[0]
 
-    return list_of_titles[similar_movie_indices[0]]
+    # Get the poster paths for the similar movies
+    # similar_movie_posters = [f"http://image.tmdb.org/t/p/w185{poster_path}" if poster_path else '/static/images/360_F_335870951_YOHbsBpoBva5TFpCwNqRdsurzzwLukuI.jpg' for poster_path in similar_movie_posters]
+    # similar_movie_posters = [f"http://image.tmdb.org/t/p/w185{poster_path}" for poster_path in similar_movie_posters]
+    # return list_of_titles[similar_movie_indices[0]]
+    # return [list_of_titles[index] for index in similar_movie_indices]
+    return [(list_of_titles[index], similar_movie_posters[i]) for i, index in enumerate(similar_movie_indices)]
 
 if __name__ == '__main__':
     app.run()

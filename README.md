@@ -56,6 +56,7 @@ The python file contains one route to render the index.html template and the fun
   - Change relevant file paths
   
 ![Screenshot_20230605_014014](https://github.com/chrischaney3/movie_genie/assets/112741203/0fcd6d40-2f39-4ddc-9256-6baa405b8342)
+
 ![Screenshot_20230605_014031](https://github.com/chrischaney3/movie_genie/assets/112741203/a325d5f3-acaf-4302-b987-f7733ab3239a)
 
 

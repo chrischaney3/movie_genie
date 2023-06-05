@@ -1,3 +1,6 @@
+![Screen-Shot-2018-10-10-at-3](https://github.com/chrischaney3/movie_genie/assets/112741203/b164f293-862a-4344-a219-3c5948e8dfcf)
+
+
 # The Movie Genie Web Application
 ## Overview:
 Movie Genie is a movie recommendation web app designed to provide personalized movie suggestions based on users' preferences. With a vast database of movies spanning different genres and eras, our app aims to enhance the movie-watching experience by offering relevant and curated recommendations. Leveraging advanced machine learning algorithms, Movie Genie analyzes user preferences, viewing history, and user-generated ratings to generate accurate and tailored movie suggestions.
@@ -10,13 +13,22 @@ Create a machine learning algorithm for recommending personalized movie suggesti
 - ***Finalizing the topic:*** Refine the topic and scope of the project, ensuring it aligns with the objectives of Movie Genie.
 - ***Coming up with the possible data source:*** Identify potential data sources such as Kaggle or IMDb for gathering movie-related information.
 
+## Clean The Data:
+![Screenshot_20230605_124430](https://github.com/chrischaney3/movie_genie/assets/112741203/e4816a12-37b3-4258-843f-75f5c21eb455)
+
+
 style.css
 This style sheet determines the font, the text size, and colorscheme.
+
 <img width="362" alt="Screenshot 2023-06-04 at 10 00 08 PM" src="https://github.com/chrischaney3/movie_genie/assets/112666732/a66c1112-2718-4e91-a923-629e3abcbfaa">
 
 data.html
 The html file references the style sheet for the flask app in the header section, then has the input section for the user to input their favorite movie title after the prompt. First it outputs the model's guess for what the user inputted with an "if" statement for whether the inputted movie is the first in the similar_movie_indices list. The user can misscapitalize, misspell, or leave out punctuation in their input, and the model will return it's assumption under "Did you mean:". It displays the text "I think you will like: " and displays the the top 3 movie suggestions in the similar_movie_indices. The href creates a hyperlink to the imdb page for each movie suggested. 
 insert the screenshot from slide 9
+
+
+
+
 
 movie_app.py
 Imports the necessary libraries for the model and for Flask

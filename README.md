@@ -78,4 +78,5 @@ insert screenshot from slide 8
 Chris Chaney, Farrukh Sultani, Kyra Achee, Katherine Winder and Terry Goins
 
 ## Resources:
-![Screenshot_20230605_015339](https://github.com/chrischaney3/movie_genie/assets/112741203/fbfd4e1f-ff90-4957-8e9f-5e95d85229c5)
+
+

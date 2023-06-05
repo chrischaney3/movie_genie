@@ -1,4 +1,6 @@
-![Screen-Shot-2018-10-10-at-3](https://github.com/chrischaney3/movie_genie/assets/112741203/b164f293-862a-4344-a219-3c5948e8dfcf)
+![Screen-Shot-2018-10-10-at-3](https://github.com/chrischaney3/movie_genie/assets/112741203/e1ec48e2-78e9-45ae-95aa-c5cd9e26c51d)
+
+
 
 
 # The Movie Genie Web Application

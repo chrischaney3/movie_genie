@@ -6,7 +6,7 @@
 # The Movie Genie Web Application
 ## Overview:
 Movie Genie is a movie recommendation web app designed to provide personalized movie suggestions based on users' preferences. With a vast database of movies spanning different genres and eras, our app aims to enhance the movie-watching experience by offering relevant and curated recommendations. Leveraging advanced machine learning algorithms, Movie Genie analyzes user preferences, viewing history, and user-generated ratings to generate accurate and tailored movie suggestions.
-![Screenshot 2023-06-04 at 10 03 42 AM](https://github.com/chrischaney3/movie_genie/assets/112741203/7332cc65-ad39-4c9e-a5ac-3302d778f211)
+
 
 ### Created by: 
 Chris Chaney, Farrukh Sultani, Kyra Achee, Katherine Winder and Terry Goins
@@ -79,11 +79,9 @@ Defines the make_suggestion function with the code for the model which returns a
 
 
 ## Demonstartion:
-![Screenshot 2023-06-04 at 10 03 42 AM (1)](https://github.com/chrischaney3/movie_genie/assets/112741203/1e74ef5b-9a8a-4463-9b89-05419deb8c5b)
-
-
+![Screenshot 2023-06-05 at 6 20 43 PM](https://github.com/chrischaney3/movie_genie/assets/112741203/b600cc29-d3d1-49b9-a90d-651655647c60)
 
 
 ## Resources:
   - https://youtu.be/v1PfNYOQ4Fk
-  - pythonanywhere.com 
+  - https://pythonanywhere.com 

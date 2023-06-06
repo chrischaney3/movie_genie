@@ -29,7 +29,7 @@ Create a machine learning algorithm for recommending personalized movie suggesti
 
 ## Model and List
   - We use the vectorizer to convert the raw text strings into numbers
-  - Hey Chris goUsing the NearestNeighbors algorithm we identify the most similar attributes
+  - Using the NearestNeighbors algorithm we identify the most similar attributes
   - We use the newly ordered data compared to the input title and pull indices most near to create a list of similar movies
   ![Screenshot_20230605_012828](https://github.com/chrischaney3/movie_genie/assets/112741203/7e3ac995-afb3-454e-9623-d6fdec6abc00)
 

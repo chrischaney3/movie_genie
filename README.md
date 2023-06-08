@@ -1,5 +1,5 @@
 ![Screen-Shot-2018-10-10-at-3](https://github.com/chrischaney3/movie_genie/assets/112741203/e1ec48e2-78e9-45ae-95aa-c5cd9e26c51d)
-http://kyrabob.pythonanywhere.com/
+
 
 
 
@@ -81,7 +81,9 @@ Defines the make_suggestion function with the code for the model which returns a
 ## Demonstartion:
 ![Screenshot 2023-06-05 at 6 20 43 PM](https://github.com/chrischaney3/movie_genie/assets/112741203/b600cc29-d3d1-49b9-a90d-651655647c60)
 
-
+Note: This is a personal domain with some limitations and it might run a bit slow when you click on the app link.
+  - http://kyrabob.pythonanywhere.com
+  
 ## Resources:
   - https://youtu.be/v1PfNYOQ4Fk
   - https://pythonanywhere.com 
